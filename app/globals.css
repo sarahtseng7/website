@@ -315,7 +315,7 @@ pre {
   width: 320px;
   height: 320px;
   object-fit: cover;
-  object-position: center top;
+  object-position: 50% 20%;
   border-radius: 50%;
   display: block;
   box-shadow:
@@ -523,6 +523,50 @@ pre {
   border-color: var(--primary);
   box-shadow: 0 4px 24px hsl(240 60% 50% / 0.1);
   transform: translateY(-2px);
+}
+
+/* Demos preserve the complete application window without cropping. */
+.project-demo { margin-bottom: 1.25rem; }
+.project-demo-frame {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.project-demo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.project-demo-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.project-demo-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.project-demo-toggle:hover { border-color: var(--primary); }
+.project-demo-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
 
 .project-name {
@@ -860,7 +904,9 @@ pre {
 }
 
 @media (max-width: 720px) {
-  .hero-character { display: none; }
+  .hero-inner { flex-direction: column; gap: 2rem; }
+  .hero-character { width: 220px; height: 220px; align-self: center; }
+  .character-figure, .character-img { width: 220px; height: 220px; }
   .projects-grid { grid-template-columns: 1fr; }
 }
 

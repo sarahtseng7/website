@@ -197,13 +197,24 @@ export interface ProjectEntry {
   github?:     string;
   live?:       string;
   featured:    boolean;
+  demo?: { src: string; poster: string; alt: string };
 }
 
 export const PROJECTS: ProjectEntry[] = [
   {
     name: 'Word Guess Helper',
+    demo: { src: '/images/word-guess-helper.gif', poster: '/images/word-guess-helper-poster.png', alt: 'Word Guess Helper application walkthrough' },
     description: 'Built a Java Swing tool that filters 370,000+ words using Wordle rules, narrowing possible answers by up to 99.9%. Designed an interactive interface with custom color-state buttons and a responsive layout, improving solve speed by 50%. Developed August–September 2026.',
     tech: ['Java', 'Swing'],
+    github: `${GITHUB_URL}/Word-Guess-Helper`,
+    featured: true,
+  },
+  {
+    name: 'Pet Adoption Simulator',
+    demo: { src: '/images/pet-adoption-simulator.gif', poster: '/images/pet-adoption-simulator-poster.png', alt: 'Pet Adoption Simulator application walkthrough' },
+    description: 'A Java Swing shelter-management game where players match pets with adopters based on lifestyle, energy levels, and care needs. Features compatibility and return-risk scoring, searchable profiles, urgency sorting, a resource shop, and CSV-backed saves, match history, and leaderboards.',
+    tech: ['Java', 'Swing', 'Object-Oriented Programming', 'CSV'],
+    github: `${GITHUB_URL}/Pet-Adoption-Simulator`,
     featured: true,
   },
 ];
@@ -229,7 +240,7 @@ export const SOCIAL_LINKS = [
 // Resume". If you don't want to show a resume link, delete that entry.
 export const CONTACT = {
   email: ME.email,
-  blurb: "Let's connect about software, robotics, or teaching. I'd love to hear what you're building and share what I'm working on.",
+  blurb: "I'm seeking summer internships and am available from mid-June through mid-September. Let's connect about opportunities in software development or robotics.",
   links: [
     { label: 'Email',    href: EMAIL_HREF,     display: ME.email                         },
     { label: 'GitHub',   href: GITHUB_URL,     display: `github.com/${ME.github}`        },

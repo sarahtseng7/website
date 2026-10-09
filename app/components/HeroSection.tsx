@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { PERSON, HERO } from '@/app/config';
 
 /* Colored squares that arc across the hero (blue → purple → pink)
@@ -78,19 +79,17 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Right: character illustration */}
-        <div className="hero-character" aria-hidden="true">
-          {/*
-            TODO: Replace this placeholder with your own photo or illustration:
-            <img src="/images/your-photo.png" alt="" className="character-img" />
-
-            Or remove the hero-text and go fully visual like the original.
-          */}
+        <div className="hero-character">
           <div className="character-figure">
-            <div className="character-placeholder">
-              <span role="img" aria-hidden="true">🧑‍💻</span>
-              <small>Code · Robotics · Community</small>
-            </div>
+            <Image
+              src="/images/headshot.png"
+              alt="Sarah Tseng"
+              width={1074}
+              height={1464}
+              sizes="(max-width: 720px) 220px, 320px"
+              preload
+              className="character-img"
+            />
           </div>
         </div>
       </div>

@@ -1,15 +1,17 @@
 import { PROJECTS } from '@/app/config';
+import { ProjectDemo } from '@/app/components/ProjectDemo';
 
 export function ProjectsSection() {
   return (
     <section id="projects" className="portfolio-section">
       <div className="section-header">
-        <span className="section-label">Things I've built</span>
+        <span className="section-label">Things I&apos;ve built</span>
       </div>
 
       <div className="projects-grid">
         {PROJECTS.map((project) => (
           <div key={project.name} className="project-card">
+            {project.demo && <ProjectDemo {...project.demo} />}
             <p className="project-name">{project.name}</p>
             <p className="project-desc">{project.description}</p>
 
