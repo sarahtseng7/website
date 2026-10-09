@@ -202,11 +202,11 @@ export interface ProjectEntry {
 
 export const PROJECTS: ProjectEntry[] = [
   {
-    name: 'Word Guess Helper',
-    demo: { src: '/images/word-guess-helper.gif', poster: '/images/word-guess-helper-poster.png', alt: 'Word Guess Helper application walkthrough' },
-    description: 'Built a Java Swing tool that filters 370,000+ words using Wordle rules, narrowing possible answers by up to 99.9%. Designed an interactive interface with custom color-state buttons and a responsive layout, improving solve speed by 50%. Developed August–September 2026.',
-    tech: ['Java', 'Swing'],
-    github: `${GITHUB_URL}/Word-Guess-Helper`,
+    name: 'WordleCheat',
+    demo: { src: '/images/word-guess-helper.gif', poster: '/images/word-guess-helper-poster.png', alt: 'Word Guess Helper desktop version walkthrough' },
+    description: 'A browser-based word-game helper with five-letter Wordle and twelve-letter modes. Enter guesses and mark gray, yellow, and green clues to narrow possible answers. The JavaScript filtering engine handles repeated letters and combines constraints across guesses, while a responsive interface displays candidate counts and alphabetized results. Runs entirely in the browser with no backend or build step.',
+    tech: ['JavaScript', 'HTML', 'CSS'],
+    github: `${GITHUB_URL}/WordleCheat`,
     featured: true,
   },
   {
