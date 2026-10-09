@@ -89,7 +89,7 @@ export function HeroSection() {
           <div className="character-figure">
             <div className="character-placeholder">
               <span role="img" aria-hidden="true">🧑‍💻</span>
-              <small>Your photo here</small>
+              <small>Code · Robotics · Community</small>
             </div>
           </div>
         </div>

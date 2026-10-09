@@ -4,7 +4,7 @@ export function EducationSection() {
   return (
     <section id="education" className="portfolio-section">
       <div className="section-header">
-        <span className="section-label">Where I studied</span>
+        <span className="section-label">Education</span>
       </div>
 
       <div className="edu-list">
@@ -15,7 +15,7 @@ export function EducationSection() {
                 <p className="edu-school">{entry.school}</p>
                 <p className="edu-degree">{entry.degree}{entry.minor ? `, Minor in ${entry.minor}` : ''}</p>
                 <p className="edu-meta">
-                  Expected {entry.graduation}{entry.gpa ? ` · GPA ${entry.gpa}` : ''}
+                  {entry.completed ? 'Graduated' : 'Expected'} {entry.graduation}{entry.gpa ? ` · GPA ${entry.gpa}` : ''}
                 </p>
               </div>
             </div>
