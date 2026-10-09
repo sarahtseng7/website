@@ -83,7 +83,7 @@ export const NAV_LINKS = [
 // buttons — set `primary: true` for the filled/highlighted button.
 export const HERO = {
   greeting: "Hi, I'm",
-  bio:      "I'm a computer science student at UCLA who enjoys building useful software and helping others learn. I've led robotics software development, built a word-game helper in Java, and brought coding and English lessons to students in my community and Taiwan.",
+  bio:      "Driven first-year Computer Science student at UCLA with Java experience through advanced coursework and a high school robotics leadership role. Seeking hands-on experience working with projects to develop coding and leadership skills.",
   ctas: [
     { label: 'View my projects →', href: '#projects', primary: true  },
     { label: 'Get in touch',       href: '#contact',  primary: false },
@@ -112,7 +112,7 @@ export const EDUCATION: EducationEntry[] = [
   },
   {
     school: 'Evergreen Valley High School',
-    degree: 'High School · SAT 1540',
+    degree: 'High School',
     gpa: '4.0',
     graduation: 'June 2026',
     courses: [],
@@ -121,7 +121,7 @@ export const EDUCATION: EducationEntry[] = [
 ];
 
 // ── Experience ────────────────────────────────────────────────────────
-// One entry per job/internship/TA position, most recent first. `bullets`
+// One entry per role, ordered to match the resume. `bullets`
 // are rendered as a list of achievements — keep them action-oriented and
 // quantify impact where you can. `tech` shows as tag chips.
 export interface ExperienceEntry {
@@ -136,16 +136,17 @@ export interface ExperienceEntry {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    company: 'Connexpedition',
-    role: 'Teaching Volunteer',
-    location: 'New Taipei City, Taiwan',
-    start: 'Sep 2025', end: 'Present',
+    company: 'FTC Athena Robotics 9657',
+    role: 'Programming Lead',
+    location: 'San Jose, CA',
+    start: 'Aug 2023', end: 'Aug 2026',
     bullets: [
-      'Taught 11 Taiwanese middle school students in person for two weeks and online weekly for three months.',
-      'Organized English lessons that integrated American culture to strengthen language skills and cultural understanding.',
-      'Collaborated with staff and volunteers to improve the learning experience for participants.',
+      'Led software development for FIRST Tech Challenge, delivering autonomous and teleoperated robot systems.',
+      'Mentored six new members through hands-on workshops in GitHub, Java, Android Studio, and OpenCV.',
+      'Led STEM outreach for 180+ students at elementary schools and local libraries.',
+      'Engineered a TensorFlow-based object detection system, earning the 2023–24 Control Award.',
     ],
-    tech: [],
+    tech: ['Java', 'Android Studio', 'OpenCV', 'TensorFlow', 'GitHub'],
   },
   {
     company: 'Evergreen Valley High School',
@@ -160,6 +161,18 @@ export const EXPERIENCE: ExperienceEntry[] = [
     tech: [],
   },
   {
+    company: 'Connexpedition',
+    role: 'Teaching Volunteer',
+    location: 'New Taipei City, Taiwan',
+    start: 'Sep 2025', end: 'Present',
+    bullets: [
+      'Taught 11 Taiwanese middle school students in person for two weeks and online weekly for three months.',
+      'Organized English lessons that integrated American culture to strengthen language skills and cultural understanding.',
+      'Collaborated with staff and volunteers to improve the learning experience for participants.',
+    ],
+    tech: [],
+  },
+  {
     company: 'Badminton Club at Evergreen Valley High School',
     role: 'Club President',
     location: 'San Jose, CA',
@@ -169,19 +182,6 @@ export const EXPERIENCE: ExperienceEntry[] = [
       'Competed in varsity mixed doubles on a team with 10 consecutive league championships.',
     ],
     tech: [],
-  },
-  {
-    company: 'FTC Athena Robotics 9657',
-    role: 'Programming Lead',
-    location: 'San Jose, CA',
-    start: 'Aug 2023', end: 'Aug 2026',
-    bullets: [
-      'Led software development for FIRST Tech Challenge, delivering autonomous and teleoperated robot systems.',
-      'Mentored six new members through hands-on workshops in GitHub, Java, Android Studio, and OpenCV.',
-      'Led STEM outreach for 180+ students at elementary schools and local libraries.',
-      'Engineered a TensorFlow-based object detection system, earning the 2023–24 Control Award.',
-    ],
-    tech: ['Java', 'Android Studio', 'OpenCV', 'TensorFlow', 'GitHub'],
   },
 ];
 
@@ -219,13 +219,6 @@ export const PROJECTS: ProjectEntry[] = [
   },
 ];
 
-export const SKILLS = [
-  { label: 'Languages', items: ['JavaScript', 'Java', 'C/C++', 'Python', 'HTML'] },
-  { label: 'Frameworks', items: ['React'] },
-  { label: 'Developer tools', items: ['Git', 'Xcode', 'Visual Studio Code', 'Eclipse'] },
-  { label: 'Libraries', items: ['TensorFlow'] },
-];
-
 // ── Social links ──────────────────────────────────────────────────────
 // Shown in the header/hero area. Add or remove entries as needed.
 export const SOCIAL_LINKS = [
@@ -240,7 +233,7 @@ export const SOCIAL_LINKS = [
 // Resume". If you don't want to show a resume link, delete that entry.
 export const CONTACT = {
   email: ME.email,
-  blurb: "I'm seeking summer internships and am available from mid-June through mid-September. Let's connect about opportunities in software development or robotics.",
+  blurb: "I'm seeking summer internships and am available from mid-June through mid-September. Let's connect about opportunities in software development.",
   links: [
     { label: 'Email',    href: EMAIL_HREF,     display: ME.email                         },
     { label: 'GitHub',   href: GITHUB_URL,     display: `github.com/${ME.github}`        },
