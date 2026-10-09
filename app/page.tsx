@@ -6,6 +6,8 @@ import { ExperienceSection } from '@/app/components/ExperienceSection';
 import { ProjectsSection }  from '@/app/components/ProjectsSection';
 import { ContactSection }   from '@/app/components/ContactSection';
 
+import { SkillsSection } from '@/app/components/SkillsSection';
+
 export default function HomePage() {
   return (
     <div className="page-wrapper">
@@ -17,6 +19,7 @@ export default function HomePage() {
           <ExperienceSection />
           <ProjectsSection />
           <EducationSection />
+          <SkillsSection />
           <ContactSection />
         </div>
       </main>

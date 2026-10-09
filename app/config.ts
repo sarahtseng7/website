@@ -23,12 +23,12 @@
 // The single source of truth for anything identifying you. Every other
 // section below derives from these fields instead of repeating them.
 export const ME = {
-  firstName:  'Your',
-  lastName:   'Name',
-  role:       'Software Engineer', // e.g. "Software Engineer", "Data Scientist"
-  email:      'you@example.com',
-  github:     'yourusername',      // GitHub username only, no URL
-  linkedin:   'yourusername',      // LinkedIn username only, no URL
+  firstName:  'Sarah',
+  lastName:   'Tseng',
+  role:       'Computer Science Student', // e.g. "Software Engineer", "Data Scientist"
+  email:      'sarahtseng7@ucla.edu',
+  github:     'sarahtseng7',      // GitHub username only, no URL
+  linkedin:   'sarah-tseng-a3b099257',      // LinkedIn username only, no URL
   resumePath: '/resume.pdf',       // path under public/ — see README.md
 };
 
@@ -65,7 +65,7 @@ export const SITE = {
   url:         SITE_URL,
   title:       `${PERSON.fullName} — ${PERSON.role}`,
   titleSuffix: `| ${PERSON.fullName}`,
-  description: `Personal portfolio of ${PERSON.fullName}, a ${PERSON.role} at UCLA.`,
+  description: `Personal portfolio of ${PERSON.fullName}, a UCLA computer science student exploring robotics, software development, and STEM education.`,
 };
 
 // ── Navigation links ──────────────────────────────────────────────────
@@ -83,7 +83,7 @@ export const NAV_LINKS = [
 // buttons — set `primary: true` for the filled/highlighted button.
 export const HERO = {
   greeting: "Hi, I'm",
-  bio:      "I'm a computer science student at UCLA passionate about building software that solves real problems. I love working across the stack, from crafting clean UIs to designing scalable back-ends.",
+  bio:      "I'm a computer science student at UCLA who enjoys building useful software and helping others learn. I've led robotics software development, built a word-game helper in Java, and brought coding and English lessons to students in my community and Taiwan.",
   ctas: [
     { label: 'View my projects →', href: '#projects', primary: true  },
     { label: 'Get in touch',       href: '#contact',  primary: false },
@@ -99,24 +99,24 @@ export interface EducationEntry {
   minor?:     string;
   gpa?:       string;
   graduation: string;
+  completed?: boolean;
   courses:    string[];
 }
 
 export const EDUCATION: EducationEntry[] = [
   {
-    school:     'University of California, Los Angeles',
-    degree:     'B.S. Computer Science',
-    minor:      'Statistics',
-    gpa:        '3.82',
+    school: 'University of California, Los Angeles',
+    degree: 'B.S. Computer Science',
+    graduation: '2029',
+    courses: [],
+  },
+  {
+    school: 'Evergreen Valley High School',
+    degree: 'High School · SAT 1540',
+    gpa: '4.0',
     graduation: 'June 2026',
-    courses: [
-      'Data Structures & Algorithms',
-      'Operating Systems',
-      'Computer Networks',
-      'Machine Learning',
-      'Probability & Statistics',
-      'Software Engineering',
-    ],
+    courses: [],
+    completed: true,
   },
 ];
 
@@ -136,30 +136,52 @@ export interface ExperienceEntry {
 
 export const EXPERIENCE: ExperienceEntry[] = [
   {
-    company:  'Acme Corporation',
-    role:     'Software Engineer Intern',
-    location: 'San Francisco, CA',
-    start:    'Jun 2025',
-    end:      'Aug 2025',
+    company: 'Connexpedition',
+    role: 'Teaching Volunteer',
+    location: 'New Taipei City, Taiwan',
+    start: 'Sep 2025', end: 'Present',
     bullets: [
-      'Built a real-time dashboard in React and TypeScript, reducing incident response time by 40%.',
-      'Designed and deployed three REST API endpoints serving 50k requests per day.',
-      'Collaborated with the design team to ship a redesigned onboarding flow that improved conversion by 18%.',
+      'Taught 11 Taiwanese middle school students in person for two weeks and online weekly for three months.',
+      'Organized English lessons that integrated American culture to strengthen language skills and cultural understanding.',
+      'Collaborated with staff and volunteers to improve the learning experience for participants.',
     ],
-    tech: ['React', 'TypeScript', 'Python', 'PostgreSQL', 'AWS'],
+    tech: [],
   },
   {
-    company:  'UCLA Engineering',
-    role:     'Teaching Assistant — CS 33',
-    location: 'Los Angeles, CA',
-    start:    'Sep 2024',
-    end:      'Dec 2024',
+    company: 'Evergreen Valley High School',
+    role: "Teacher’s Assistant — Computer Science",
+    location: 'San Jose, CA',
+    start: 'Aug 2025', end: 'Jun 2026',
     bullets: [
-      'Led weekly discussion sections for 40 students covering systems programming in C.',
-      'Held office hours to assist students with debugging and conceptual questions.',
-      'Wrote and graded three programming assignments and two midterms.',
+      'Prepared coding materials and activities with instructors for weekly lessons serving 30+ students.',
+      'Spent 3+ hours per week grading assignments and giving feedback on programming fundamentals.',
+      'Helped classmates debug programs and strengthen their understanding of programming concepts.',
     ],
-    tech: ['C', 'x86 Assembly', 'Linux'],
+    tech: [],
+  },
+  {
+    company: 'Badminton Club at Evergreen Valley High School',
+    role: 'Club President',
+    location: 'San Jose, CA',
+    start: 'Aug 2024', end: 'Jun 2026',
+    bullets: [
+      'Managed a club of 350+ members, coordinating fundraisers, senior night, and monthly meetings.',
+      'Competed in varsity mixed doubles on a team with 10 consecutive league championships.',
+    ],
+    tech: [],
+  },
+  {
+    company: 'FTC Athena Robotics 9657',
+    role: 'Programming Lead',
+    location: 'San Jose, CA',
+    start: 'Aug 2023', end: 'Aug 2026',
+    bullets: [
+      'Led software development for FIRST Tech Challenge, delivering autonomous and teleoperated robot systems.',
+      'Mentored six new members through hands-on workshops in GitHub, Java, Android Studio, and OpenCV.',
+      'Led STEM outreach for 180+ students at elementary schools and local libraries.',
+      'Engineered a TensorFlow-based object detection system, earning the 2023–24 Control Award.',
+    ],
+    tech: ['Java', 'Android Studio', 'OpenCV', 'TensorFlow', 'GitHub'],
   },
 ];
 
@@ -179,35 +201,18 @@ export interface ProjectEntry {
 
 export const PROJECTS: ProjectEntry[] = [
   {
-    name:        'StudySync',
-    description: 'A collaborative study-planning app that lets UCLA students share notes, schedule group sessions, and track progress together in real time.',
-    tech:        ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
-    github:      `${GITHUB_URL}/studysync`,
-    live:        'https://studysync.app',
-    featured:    true,
+    name: 'Word Guess Helper',
+    description: 'Built a Java Swing tool that filters 370,000+ words using Wordle rules, narrowing possible answers by up to 99.9%. Designed an interactive interface with custom color-state buttons and a responsive layout, improving solve speed by 50%. Developed August–September 2026.',
+    tech: ['Java', 'Swing'],
+    featured: true,
   },
-  {
-    name:        'BruinBot',
-    description: 'A Discord bot that surfaces real-time UCLA dining menu data, library room availability, and bus schedules for 2,000+ active users.',
-    tech:        ['Node.js', 'Discord.js', 'REST APIs', 'Cron'],
-    github:      `${GITHUB_URL}/bruinbot`,
-    featured:    true,
-  },
-  {
-    name:        'PocketPortfolio',
-    description: 'A mobile-first stock portfolio tracker with custom alerts and a clean chart-based UI, built during a 24-hour hackathon.',
-    tech:        ['React Native', 'Expo', 'Recharts', 'Firebase'],
-    github:      `${GITHUB_URL}/pocketportfolio`,
-    live:        'https://pocketportfolio.dev',
-    featured:    false,
-  },
-  {
-    name:        'AutoGrade',
-    description: 'A command-line grading tool that runs student Python submissions against test suites in isolated Docker containers and produces structured reports.',
-    tech:        ['Python', 'Docker', 'Bash', 'SQLite'],
-    github:      `${GITHUB_URL}/autograde`,
-    featured:    false,
-  },
+];
+
+export const SKILLS = [
+  { label: 'Languages', items: ['JavaScript', 'Java', 'C/C++', 'Python', 'HTML'] },
+  { label: 'Frameworks', items: ['React'] },
+  { label: 'Developer tools', items: ['Git', 'Xcode', 'Visual Studio Code', 'Eclipse'] },
+  { label: 'Libraries', items: ['TensorFlow'] },
 ];
 
 // ── Social links ──────────────────────────────────────────────────────
@@ -224,12 +229,11 @@ export const SOCIAL_LINKS = [
 // Resume". If you don't want to show a resume link, delete that entry.
 export const CONTACT = {
   email: ME.email,
-  blurb: "I'm actively looking for internships and new-grad roles starting 2026. If you're working on something interesting or just want to chat, my inbox is always open.",
+  blurb: "Let's connect about software, robotics, or teaching. I'd love to hear what you're building and share what I'm working on.",
   links: [
     { label: 'Email',    href: EMAIL_HREF,     display: ME.email                         },
     { label: 'GitHub',   href: GITHUB_URL,     display: `github.com/${ME.github}`        },
     { label: 'LinkedIn', href: LINKEDIN_URL,   display: `linkedin.com/in/${ME.linkedin}` },
-    { label: 'Resume',   href: ME.resumePath,  display: 'Download PDF'                   },
   ],
 };
 
@@ -237,7 +241,7 @@ export const CONTACT = {
 // `columns` renders as link groups. The Resume link here reuses
 // ME.resumePath, so it stays in sync with CONTACT automatically.
 export const FOOTER = {
-  tagline: "UCLA Computer Science student building things for the web.",
+  tagline: "UCLA computer science student. Building software, exploring robotics, and sharing what I learn.",
   columns: [
     {
       heading: 'Portfolio',
@@ -254,7 +258,6 @@ export const FOOTER = {
         { label: 'GitHub',   href: GITHUB_URL     },
         { label: 'LinkedIn', href: LINKEDIN_URL   },
         { label: 'Email',    href: EMAIL_HREF     },
-        { label: 'Resume',   href: ME.resumePath  },
       ],
     },
   ],
