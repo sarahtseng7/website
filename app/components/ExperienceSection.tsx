@@ -4,7 +4,7 @@ export function ExperienceSection() {
   return (
     <section id="experience" className="portfolio-section">
       <div className="section-header">
-        <span className="section-label">Where I've worked</span>
+        <span className="section-label">My Experiences</span>
       </div>
 
       <div className="exp-list">
