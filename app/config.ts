@@ -238,6 +238,7 @@ export const CONTACT = {
     { label: 'Email',    href: EMAIL_HREF,     display: ME.email                         },
     { label: 'GitHub',   href: GITHUB_URL,     display: `github.com/${ME.github}`        },
     { label: 'LinkedIn', href: LINKEDIN_URL,   display: `linkedin.com/in/${ME.linkedin}` },
+    { label: 'Resume', href: ME.resumePath, display: 'View resume PDF' },
   ],
 };
 
@@ -262,6 +263,7 @@ export const FOOTER = {
         { label: 'GitHub',   href: GITHUB_URL     },
         { label: 'LinkedIn', href: LINKEDIN_URL   },
         { label: 'Email',    href: EMAIL_HREF     },
+        { label: 'Resume', href: ME.resumePath },
       ],
     },
   ],
